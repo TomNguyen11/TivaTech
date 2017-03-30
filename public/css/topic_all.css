@@ -1,0 +1,125 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    /*border: 1px solid red;*/
+}
+/* For mobile phones */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop*/
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+.title_main {
+    text-align:center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(15, 28, 20);
+    font-weight:900;
+}
+.list-topics {
+    width: 90%;
+    margin: 0 auto;
+}
+.item-topic {
+    margin: 10px 4% 30px;
+    max-width: 200px;
+    height: 100px;
+    float: left;
+}
+.logo-topic {
+    background-color: #5f9580;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    height:100px;
+    border-radius: 4px;
+    padding: 25px 0;
+    float: left;
+}
+.logo-topic-image {
+    width: 100px;
+    height:100px;
+    border-radius: 4px;
+    float: left;
+}
+.logo-topic p {
+    display: block;
+    vertical-align: middle;
+    padding: 15px;
+}
+.info-topic {
+    float: right;
+    height: 100%;
+    line-height: 1.5;
+    padding-left: 10px;
+}
+.info-topic p {
+    text-align: left;
+}
+.info-topic > p:first-child {
+    font-weight:bold;
+    font-size: 16px;
+}
+.info-topic > p:nth-child(2), .info-topic > p:nth-child(3) {
+    font-size: 14px;
+    color: rgba(87, 129, 94, 0.86);
+}
+.info-topic a {
+    display:block;
+    color: #d24010;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 2px;
+    border: 1px solid #b73232;
+    font-size: 15px;
+}
+.info-topic a:hover {
+    background-color: #ec3535;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.item-name {
+    text-transform: uppercase;
+}

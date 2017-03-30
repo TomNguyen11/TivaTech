@@ -1,0 +1,108 @@
+<div class="post-container" post-id="1">
+  <p>
+    asda sd asd asd asd
+  </p>
+  <div class="comment-counts" post-id="1">12 comments</div>
+  <button class="comment-btn" post-id="1">Comment</button>
+  <div class="comments-container" post-id="1" style="display: none">
+    <div class="list"></div>
+    <div class="post-comment">
+      <form class="comment-form" post-id="1">
+        <input type="text" name="content">
+        <input type="submit" name="asdas">
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$('.comment-btn').click(function () {
+  var $elm = $(this);
+  var postId = $elm.attr('post-id');
+
+  $.ajax({
+    url: '/comments',
+    data: { postId: postId }
+  }).done(function (results) {
+    var html = $('<div>');
+    foreach (comment in results) {
+      html.append('<div>'+comment.content+'</div>');
+    }
+    $('.comments-container[post-id='+postId+'] .list').append(html);
+
+    $elm.fadeIn();
+  });
+});
+
+$('.comment-form').submit(function () {
+  $('.comment-btn[post-id='+postId+']').click();
+ 
+});
+</script>
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('a.btn-comment').click(function(){
+        var elm = $(this);
+        var postID = $(this).attr("post-id");
+
+        if($('.comment-container[post-id='+postID+']').css('display')=='none') {
+            $('.comment-container[post-id='+postID+']').fadeIn();
+        } else {
+            $('.comment-container[post-id='+postID+']').fadeOut();
+        }
+
+        $('.comment-content').click(function(){
+            if($('.comment-time').css('display')=='none') {
+                $('.comment-time').fadeIn();
+            } else {
+                $('.comment-time').fadeOut();
+            }
+        });
+        $.ajax
+        ({
+            type: "GET",
+            url: "index.php?ctr=comment",
+            data: {post_id: postID}
+        }).done(function(result){
+
+            for (i=0;i<result.commentList.length;i++){
+                //alert(result.authorComments[result.commentList[0]['id']]['firstname']);
+                var photo = result.authorComments[result.commentList[i]['id']]['photo'];
+                if(photo==null){
+                  photo = "public/images/avatar.png";
+                }
+                var cmtList = '<div class="comment-item clearfix">'
+
+                +    '<div class="comment-item-photo">'
+
+                +      '<a href="authors.php" title="'+result.authorComments[result.commentList[i]['id']]['firstname']
+                +       ' '+result.authorComments[result.commentList[i]['id']]['lastname']+'">'
+                +          '<img src="'+photo+'" alt="Avartar">'
+                +      '</a>'
+
+                +    '</div>'
+
+                +    '<div class="comment-item-content">'
+                +        '<p class="comment-time">'+result.authorComments[result.commentList[i]['id']]['firstname']
+                +                                  ' '+result.authorComments[result.commentList[i]['id']]['lastname']
+                +                               ' ( '+result.commentList[i]['created_at']+') </p>'
+                +        '<p class"comment-content">'+result.commentList[i]['content']+'</p>'
+                +    '</div>'
+                +'</div>';
+
+            }
+            $('.commment-list[post-id='+postID+']').html(cmtList);
+        });
+
+
+    });
+
+
+});
+
+</script>

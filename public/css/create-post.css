@@ -1,0 +1,77 @@
+.main-post {
+    margin-top: 110px;
+}
+.author-name {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.message {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: red;
+}
+#title-post  {
+    width: 100%;
+    height: 50px;
+    border: 2px solid green;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+#topics {
+    width: 100%;
+    height: 40px;
+    border: 1px solid green;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.level-post {
+    background-color: rgb(208, 222, 217);
+    border: 2px solid #93cad4;
+    width: 20%;
+    min-width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    outline: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.btn-submit {
+    color: #fff;
+    font-size: 20px;
+    width: 20%;
+    min-width: 100px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #0f74a8;
+
+}
+.footer {
+    width: 100%;
+/*     background-color: red; */
+    margin: 10px auto;
+    text-align: center;
+}
+
+.footer a {
+    display: inline-block;
+    padding: 15px;
+    color: #0782c1;
+
+}
+.footer a:hover {
+    background-color: #d1d1d1;
+}
+.footer p {
+    text-align: center;
+}

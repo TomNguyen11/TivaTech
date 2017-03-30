@@ -1,0 +1,251 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.clearfix {
+    *zoom: 1;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+input {
+  outline: 0;
+  border: 1px solid #5a9962;
+}
+.container {
+  margin-top: 20px;
+}
+.header{
+  overflow: hidden;
+}
+.header h2{
+  float: left;
+  width: 25%;
+  font-family: serif;
+  padding: 2% 8%;
+}
+.header h2 a {
+  text-decoration: none;
+  color: #000;
+  font-family: sans-serif;
+  padding: 10px 15px;
+  text-align: center;
+}
+.header h2 a:hover {
+  background-color: #00690f;
+  color: #eff3d5;
+}
+.error {
+  background-color: #caded6;
+  width:40%;
+  min-width: 500px;
+  height: 70px;
+  text-align: center;
+  padding-top: 15px;
+  margin: 50px auto 0 auto;
+  color: #f9100a;
+  border-radius: 2px;
+  line-height: 1.5;
+}
+
+.login{
+  width: 75%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.login form{
+  overflow: hidden;
+  padding: 1% 10% 0% 0%;
+}
+.login table{
+  float: right;
+  width: 55%;
+  height: auto;
+}
+.login a{
+  text-decoration: none;
+  float: right;
+  color: red;
+  font-style: italic;
+  margin-right: 110px;
+}
+.login a:hover{
+  text-decoration: underline;
+  color: .444;
+}
+.login input{
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid rgba(44, 125, 54, 0.78);
+}
+.login input[type=submit]{
+  width: 80px;
+  height: 30px;
+  color: .fff;
+  background-color: rgba(44, 125, 54, 0.78);
+}
+.login input[type=text], input[type=password]{
+  width: 200px;
+  height: 30px;
+  margin: 5px 5px;
+  padding: 5px 5px;
+}
+.content{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: rgba(166, 204, 189, 0.39);
+  opacity: 0.9;
+  box-shadow: 4px 4px 6px #a6ccbd, 0px 2px 5px #93cad4 inset;
+
+}
+.registers{
+  width: auto;
+  height: auto;
+}
+.registers h1{
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  color: #00690f;
+}
+.registers table{
+  margin: auto;
+}
+.registers input{
+  width: 340px;
+  height: 42px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid  .a6ccbd;
+}
+.registers input[type=submit]{
+  background-color: rgb(90, 153, 98);
+  border: 1px solid rgba(44, 125, 54, 0.78);
+  margin-bottom: 80px;
+  color: .fff;
+  font-size: 18px;
+}
+.registers form tr:first-child input{
+  width: 158px;
+}
+.footer{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.top{
+  overflow: hidden;
+}
+.top ul{
+  width: 60%;
+  height: auto;
+  list-style: none;
+  display: inline-block;
+  padding: 2% 5%;
+  margin: 0 20%;
+}
+.top ul li{
+  float: left;
+  width: 30%;
+  padding: 0px 0px;
+  border-right: 1px solid #000;
+  text-align: center;
+}
+.top ul li:nth-child(3){
+  width: 20%;
+}
+.top ul li:nth-child(4){
+  width: 20%;
+  border-right: none;
+}
+.top ul li a{
+  text-decoration: none;
+  overflow: hidden;
+  color: #00690f;
+}
+.footer p{
+  text-align: center;
+  color: .444;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 768px){
+  .login input[type=text], input[type=password]{
+    width: 100px;
+    height: auto;
+  }
+  .top ul{
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 450px){
+  .header h2{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  [class*="col-"] {
+        width: 100%;
+  }
+  .login{
+    width: 100%;
+  }
+  .login form{
+    margin: 0;
+    padding: 0;
+  }
+  .login table{
+    margin: auto;
+    float: none;
+  }
+  .header a{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 400px){
+  .top ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 366px){
+    .registers input{
+      width: 240px;
+      height: auto;
+    }
+    .registers h1{
+      font-size: 24px;
+    }
+    .registers table{
+      width: 40%;
+    }
+    .registers .name{
+      width: 240px;
+      height: auto;
+      display: inline-block;
+    }
+    .registers form tr:first-child input{
+      width: 109px;
+      height: auto;
+    }
+}
